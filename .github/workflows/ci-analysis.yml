@@ -47,8 +47,8 @@ jobs:
             build-base.log
             test-base.log
 
-       - name: Build & Test (strict)
-         run: |
+      - name: Build & Test (strict)
+        run: |
            # Используем строгий набор правил
            cp .editorconfig.strict .editorconfig
            echo "=== BUILD (strict rules) ==="

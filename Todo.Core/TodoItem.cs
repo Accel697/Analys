@@ -1,4 +1,7 @@
-﻿using System;
+﻿// <copyright file="TodoItem.cs" company="NATK">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +18,7 @@ namespace Todo.Core
         {
             Title = title?.Trim() ?? throw new ArgumentNullException(nameof(title));
         }
+
         public void MarkDone() => IsDone = true;
         public void MarkUndone() => IsDone = false;
         public void Rename(string newTitle)
@@ -23,6 +27,7 @@ namespace Todo.Core
             {
                 throw new ArgumentException("Title is required", nameof(newTitle));
             }
+
             Title = newTitle.Trim();
         }
     }
